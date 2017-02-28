@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="Ripple Drawable"
+    minApi="11"
+    minBuildApi="21"
+    description="Creates Button drawables">
+
+    <category value="Other" />
+ <parameter
+        id="DrawableName"
+        name="Drawable Name"
+        type="string"
+        default="selector_btn_pink"
+        help="The Name of drawable" />
+    <parameter
+        id="ColorCode"
+        name="Color Code"
+        type="string"
+        default="FFFF00"
+        help="The color code of button" />
+    <parameter
+        id="mainButtonStyle"
+        name="Add main button style"
+        type="boolean"
+        default="false"
+        help="If true, a main style will be added and this button will inherit that style" />
+<parameter
+        id="circularButton"
+        name="Circular Button"
+        type="boolean"
+        default="false"
+        help="If true, a main style will be added and this button will inherit that style" />
+
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_thumbnail.png</thumb>
+    </thumbs>
+
+    <execute file="recipe.xml.ftl" />
+
+</template>

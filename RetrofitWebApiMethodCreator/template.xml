@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="RxJava WebApi BaseClasses"
+    minApi="11"
+    minBuildApi="21"
+    description="Creates RxJava WebApi BaseClasses">
+
+    <category value="Other" />
+    <parameter
+        id="MethodName"
+        name="Method Name"
+        type="string"
+        default="request"
+        help="The Name of Method" />
+
+    <parameter
+        id="MethodUrl"
+        name="Method Url"
+        type="string"
+        default="request"
+        help="The Url of Method" />
+
+    <parameter
+            id="requestType"
+            name="Request Type"
+            type="enum"
+            default="GET"
+            help="Make Retrofit Api method in your webservice class">
+            <option id="GET">GET</option>
+            <option id="POST">POST</option>
+            <option id="PATCH" >PATCH</option>
+            <option id="DELETE" >DELETE</option>
+            <option id="PUT" >PUT</option>
+    </parameter>
+    <parameter
+            id="requestParameters"
+            name="Request parameters"
+            type="string"
+            default=""
+            help="Parameters seperated by , exclude file upload parameters">
+     </parameter>
+    <parameter
+            id="requestFileParameters"
+            name="Request File parameters"
+            type="string"
+            default=""
+            help="File upload Parameters seperated by">
+     </parameter>
+    <parameter
+            id="requestMethod"
+            name="Request Method"
+            type="enum"
+            default="NONE"
+            help="Make Retrofit Api method in your webservice class">
+            <option id="NONE">NONE</option>
+            <option id="Multipart">Multipart</option>
+            <option id="FormUrlEncoded" >FormUrlEncoded</option>
+     </parameter>
+<parameter
+        id="circularButton"
+        name="Circular Button"
+        type="boolean"
+        default="false"
+        help="If true, a main style will be added and this button will inherit that style" />
+
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_thumbnail.png</thumb>
+    </thumbs>
+
+    <execute file="recipe.xml.ftl" />
+
+</template>

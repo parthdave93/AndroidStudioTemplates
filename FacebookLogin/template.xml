@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="Facebook login"
+    minApi="11"
+    minBuildApi="21"
+    description="Facebook login">
+
+    <category value="Other" />
+<parameter
+        id="includeSdk"
+        name="Include Sdk"
+        type="boolean"
+        default="true"
+        help="Include facebook sdk" />
+<parameter
+        id="includeManifestEntries"
+        name="Include Manifest Entries"
+        type="boolean"
+        default="true"
+        help="Include Manifest Entries" />
+<parameter
+        id="FacebookAppId"
+        name="FacebookAppId"
+        type="string"
+        default="asd"
+        constraints="nonempty"
+        help="Facebook App Id" />
+<parameter
+        id="fieldsFromFacebook"
+        name="Fetch fields From Facebook"
+        type="string"
+        constraints="nonempty"
+        default="id, first_name, last_name, email,gender, birthday, location"
+        help="Fetch fields From Facebook" />
+ <!--<parameter
+            id="parentActivityClass"
+            name="Activity In Which FbLoginNeeded"
+            type="string"
+            constraints="activity|exists|empty"
+            default=""
+            help="Activity In Which FbLoginNeeded"/>-->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_thumbnail.png</thumb>
+    </thumbs>
+
+    <execute file="recipe.xml.ftl" />
+
+</template>

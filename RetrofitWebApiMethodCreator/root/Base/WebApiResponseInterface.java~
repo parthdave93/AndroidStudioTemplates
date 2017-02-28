@@ -1,0 +1,12 @@
+package com.dotingtong.base;
+
+/**
+ * @author Parth Dave parth.dave93@gmail.com
+ * @version 1.0.0
+ * @since 7/23/2016
+ */
+public interface WebApiResponseInterface<T> {
+    void onCompleted();
+    void onError(Throwable e);
+    void onNext(T result);
+}
